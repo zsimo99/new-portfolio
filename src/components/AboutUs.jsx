@@ -17,10 +17,10 @@ const AboutUs = () => {
                     </div>
                 </div>
                 <div className="lg:basis-1/2">
-                    <h2 className="text-5xl font-extrabold text-[#309092] mb-4">
+                    <h2 className="text-4xl lg:text-5xl font-extrabold text-[#309092] mb-4">
                         About Us:
                     </h2>
-                    <p className="text-lg text-justify font-medium text-gray-700">
+                    <p className="text-base text-start md:text-lg md:text-justify font-medium text-gray-700">
                         As an adept developer, I specialize in crafting captivating3D visuals,
                         captivating user interfaces, and dynamic web applications. My
                         expertise lies in harnessing the power of JavaScript and its popular
@@ -28,7 +28,9 @@ const AboutUs = () => {
                         dedication is my continual growth as a quick learner, enabling me to
                         deliver exceptional results in every project.
                     </p>
-                    <button className="px-14 py-4 bg-slate-500 mt-4 block ms-auto rounded-md text-2xl font-bold text-white bg-gradient-to-r to-[#309092] from-[#6CC6C8] ">Hire Us</button>
+                    <button className=" px-10 py-2 md:px-14 md:py-4 bg-slate-500 mt-4 block ms-auto rounded-md text-2xl font-bold text-white bg-gradient-to-r to-[#309092] from-[#6CC6C8] relative z-0">
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-md  opacity-0 hover:opacity-100 transition-opacity duration-200 w-full h-full bg-[#ffffff30] z-10" />
+                        Hire Us</button>
                 </div>
             </div>
         </section>

@@ -18,7 +18,6 @@ const Tech = () => {
             if (window.scrollY >= (slider.offsetTop + slider.offsetHeight - window.innerHeight) && slider.offsetTop >= window.scrollY) {
                 const scroll = scrollY + innerHeight - (slider.offsetTop + slider.offsetHeight)
                 const perc = (scroll * 100) / innerHeight
-                console.log(perc)
                 slider.style.transform = `translateX(-${perc}%)`
             }
         }
