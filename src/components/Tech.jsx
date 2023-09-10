@@ -15,8 +15,11 @@ const Tech = () => {
     useEffect(() => {
         const slider = document.querySelector(".slider")
         const handleScroll = () => {
-            if (window.scrollY >= (slider.offsetTop + slider.offsetHeight - window.innerHeight) && slider.offsetTop >= window.scrollY) {
-                const scroll = scrollY + innerHeight - (slider.offsetTop + slider.offsetHeight)
+            const rect = slider.getBoundingClientRect();
+            const offsetTop = rect.top + scrollY
+            const offsetHeight = rect.height
+            if (window.scrollY >= (offsetTop + offsetHeight - window.innerHeight) && offsetTop >= window.scrollY) {
+                const scroll = scrollY + innerHeight - (offsetTop + offsetHeight)
                 const perc = (scroll * 100) / innerHeight
                 slider.style.transform = `translateX(-${perc}%)`
             }
@@ -27,26 +30,26 @@ const Tech = () => {
         }
     }, [])
     return (
-        <div className="bg-gray-50 h[80px] md:h-[100px] lg:h-[150px] flex items-center">
-            <div className="whitespace-nowrap overflow-hidden container mx-auto px-4 ">
-                <div className='slider whitespace-nowrap '>
-                    <img className="image-tech" src={html} alt="" />
-                    <img className="image-tech" src={css} alt="" />
-                    <img className="image-tech" src={js} alt="" />
-                    <img className="image-tech" src={mongo} alt="" />
-                    <img className="image-tech" src={wordpress} alt="" />
-                    <img className="image-tech" src={next} alt="" />
-                    <img className="image-tech" src={react} alt="" />
-                    <img className="image-tech" src={node} alt="" />
-                    <img className="image-tech" src={html} alt="" />
-                    <img className="image-tech" src={css} alt="" />
-                    <img className="image-tech" src={js} alt="" />
-                    <img className="image-tech" src={mongo} alt="" />
-                    <img className="image-tech" src={wordpress} alt="" />
-                    <img className="image-tech" src={next} alt="" />
-                    <img className="image-tech" src={react} alt="" />
-                    <img className="image-tech" src={node} alt="" />
-                </div>
+        <div className=" py-2 md:py-4 xl:py-6 overflow-hidden px-4 relative">
+            <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-gray-300 to-transparent z-10" />
+            <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-gray-300 to-transparent z-10" />
+            <div className='slider whitespace-nowrap '>
+                <img className="image-tech" src={html} alt="" />
+                <img className="image-tech" src={css} alt="" />
+                <img className="image-tech" src={js} alt="" />
+                <img className="image-tech" src={mongo} alt="" />
+                <img className="image-tech" src={wordpress} alt="" />
+                <img className="image-tech" src={next} alt="" />
+                <img className="image-tech" src={react} alt="" />
+                <img className="image-tech" src={node} alt="" />
+                <img className="image-tech" src={html} alt="" />
+                <img className="image-tech" src={css} alt="" />
+                <img className="image-tech" src={js} alt="" />
+                <img className="image-tech" src={mongo} alt="" />
+                <img className="image-tech" src={wordpress} alt="" />
+                <img className="image-tech" src={next} alt="" />
+                <img className="image-tech" src={react} alt="" />
+                <img className="image-tech" src={node} alt="" />
             </div>
         </div>
     )

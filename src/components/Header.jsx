@@ -11,12 +11,12 @@ const sections = [
 // eslint-disable-next-line react/prop-types
 const Header = ({ activeSection }) => {
     return (
-        <header className="top-0 left-0 fixed w-full z-[999] text-white bg-[#44444420]  shadow-xl p-3">
+        <header className="top-0 left-0 fixed w-full z-[999] text-white bg-[#44444440]  shadow-xl p-3">
             <div className="container mx-auto px-4 flex justify-between">
                 <div className="text-xl font-black">
                     logo
                 </div>
-                <ul className="flex gap-5 text-lg md:text-xl font-semibold">
+                <ul className="flex gap-5 text-lg md:text-xl xl:text-3xl font-semibold">
                     {sections.map((section) => (
                         <li key={section.id}>
                             <a
