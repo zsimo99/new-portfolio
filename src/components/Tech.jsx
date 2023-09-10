@@ -28,17 +28,9 @@ const Tech = () => {
         }
     }, [])
     return (
-        <div className="bg-gray-50 py-4">
-            <div className="whitespace-nowrap overflow-hidden container mx-auto px-4">
+        <div className="bg-gray-50 h[80px] md:h-[100px] lg:h-[150px] flex items-center">
+            <div className="whitespace-nowrap overflow-hidden container mx-auto px-4 ">
                 <div className='slider whitespace-nowrap '>
-                    <img className="image-tech" src={html} alt="" />
-                    <img className="image-tech" src={css} alt="" />
-                    <img className="image-tech" src={js} alt="" />
-                    <img className="image-tech" src={mongo} alt="" />
-                    <img className="image-tech" src={wordpress} alt="" />
-                    <img className="image-tech" src={next} alt="" />
-                    <img className="image-tech" src={react} alt="" />
-                    <img className="image-tech" src={node} alt="" />
                     <img className="image-tech" src={html} alt="" />
                     <img className="image-tech" src={css} alt="" />
                     <img className="image-tech" src={js} alt="" />

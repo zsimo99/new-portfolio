@@ -25,16 +25,6 @@ function App() {
           setSection(div.id)
         }
       })
-      // if (window.scrollY >= (slider.offsetTop + slider.offsetHeight - window.innerHeight) && slider.offsetTop >= window.scrollY) {
-      //   const scroll =
-      //     window.scrollY -
-      //     (slider.offsetTop - window.innerHeight);
-      //   const perc = (scroll * 100) / window.innerHeight;
-      //   const pixel = (perc * theWidth) / 100;
-      //   console.log(pixel)
-      //   slider.scrollLeft = pixel;
-
-      // }
     }
     window.addEventListener("scroll", handleScroll)
     return () => {
