@@ -11,7 +11,7 @@
 }
 
 .linkItem{
-  @apply p-4 block hover:text-[#309092] before:w-0 before:transition-[width] before:first-letter:duration-150 hover:before:w-10 before:h-1 before:content-[''] relative before:absolute before:bg-[#309092] before:top-full before:-translate-x-1/2 before:left-1/2 
+  @apply p-2 block hover:text-[#309092] before:w-0 before:transition-[width] before:first-letter:duration-150 hover:before:w-10 before:h-1 before:content-[''] relative before:absolute before:bg-[#309092] before:top-full before:-translate-x-1/2 before:left-1/2 
 }
 .linkItem.active{
   @apply before:w-10 text-[#309092] 
@@ -25,4 +25,22 @@
   to{
     opacity: 1;
   }
+}
+
+.animate-move{
+  animation: move 2s ease-in-out infinite alternate;
+}
+
+
+@keyframes move {
+  from {
+    transform: translate(-50px,-50px);
+  }
+  to{
+    transform: translate(-20px,-20px);
+  }
+}
+
+.image-tech{
+  @apply inline-block h-[80px] mx-10 object-contain grayscale hover:grayscale-0 transition-[filter] duration-200
 }
