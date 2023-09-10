@@ -42,7 +42,7 @@
 }
 
 .image-tech{
-  @apply inline-block h-[40px] md:h-[50px] lg:h-[70px] xl:h-[100px] mx-14 object-contain grayscale hover:grayscale-0 transition-[filter] duration-200
+  @apply inline-block h-[40px] md:h-[50px] lg:h-[70px] xl:h-[100px] mx-5 md:mx-14 object-contain grayscale hover:grayscale-0 transition-[filter] duration-200
 }
 .img-tech-cont::before{
   content: "";
