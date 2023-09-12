@@ -66,7 +66,7 @@
 .projects > div:nth-child(even){
   @apply md:flex-row-reverse
 }
-.projects > div:not(:last-child)::before{
+.projects > div:not(:last-of-type)::before{
   @apply content-[""] w-1/3 h-1 bg-[#39bec0] bottom-0 left-1/2 -translate-x-1/2 absolute
 }
 .curve{

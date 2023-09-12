@@ -12,7 +12,7 @@ const Work = () => {
                 <li className={`services ${service === "ui" && "before:w-full"}`} onClick={() => setService("ui")}>UI/UX Design</li>
                 <li className={`services ${service === "anim" && "before:w-full"}`} onClick={() => setService("anim")}>2D Animation</li>
             </ul>
-            <Projects />
+            <Projects service={service} />
         </section>
     )
 }
