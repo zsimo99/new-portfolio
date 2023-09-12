@@ -1,10 +1,30 @@
-import image from "../assets/projects/leon.png";
+import image from "../assets/projects/DynamicBlend.png";
 import arrow from "../assets/arrow-right.svg";
 import github from "../assets/github.png";
+import { useEffect, useRef, useState } from "react";
 // eslint-disable-next-line react/prop-types
 const Project = ({ nm, project: { title, link, desc, live } }) => {
+    const [showFullImage, setSHowFullImage] = useState(false)
+    const mounted = useRef(false)
+    const handleClick = () => {
+        mounted.current = true
+        setSHowFullImage(true)
+        setTimeout(() => {
+            mounted.current = false
+        }, 100);
+    }
+    useEffect(() => {
+        document.addEventListener("click", () => {
+            if (showFullImage && !mounted.current) {
+                setSHowFullImage(false)
+            }
+        })
+    }, [showFullImage])
     return (
         <div className="flex md:items-center gap-8 max-md:flex-col-reverse relative pb-8">
+            {showFullImage && <div className="fixed z-[1000] left-0 top-1/2 -translate-y-1/2 h-screen w-screen flex items-center justify-center">
+                <img className="w-screen h-[80%] object-contain" src={image} alt="" />
+            </div>}
             <div className="md:basis-1/2 basis-full">
                 <h2 className="max-md:hidden text-3xl lg:text-4xl xl:text-5xl font-bold text-[#32a6a8]">
                     Project {nm + 1}
@@ -31,8 +51,8 @@ const Project = ({ nm, project: { title, link, desc, live } }) => {
                 <h2 className="md:hidden text-3xl lg:text-4xl xl:text-5xl font-bold text-[#32a6a8] w-full mb-10">
                     Project {nm + 1}
                 </h2>
-                <div className="max-w-xl mx-auto border-8 border-[#309092]">
-                    <img className="translate-x-3 -translate-y-5" src={image} alt="" />
+                <div onClick={handleClick} className="cursor-pointer max-w-xl mx-auto border-8 border-[#309092] image-shadow ">
+                    <img className="translate-x-3 -translate-y-5  shadow-2xl shadow-black" src={image} alt="" />
                 </div>
             </div>
         </div>

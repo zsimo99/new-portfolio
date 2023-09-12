@@ -2,7 +2,9 @@ import Project from "./Project"
 import { projects } from "../constants"
 
 
+// eslint-disable-next-line react/prop-types
 const Projects = ({ service }) => {
+
     return (
         <div className="container mx-auto px-4 projects flex flex-col gap-10 mt-14" >
             {projects.filter(project => project.category === service).slice(0, 5).map((project, id) => <Project key={id} nm={id} project={project} />)}

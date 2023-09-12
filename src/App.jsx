@@ -9,20 +9,10 @@ import Work from "./components/Work"
 function App() {
   const [section, setSection] = useState("home")
   useEffect(() => {
-    // const slider = document.querySelector(".slider")
-    // const children = slider.children;
-
-    // let totalWidth = 0;
-
-    // for (let i = 0; i < children.length; i++) {
-    //   totalWidth += children[i].offsetWidth;
-    // }
-    // const theWidth = totalWidth - slider.offsetWidth;
-
     const divs = document.querySelectorAll("section")
     const handleScroll = () => {
       divs.forEach(div => {
-        if (window.scrollY > div.offsetTop && window.scrollY < (div.offsetTop + div.offsetHeight)) {
+        if (window.scrollY >= div.offsetTop && window.scrollY < (div.offsetTop + div.offsetHeight)) {
           setSection(div.id)
         }
       })

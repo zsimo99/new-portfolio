@@ -72,3 +72,6 @@
 .curve{
   @apply absolute bottom-0 left-0 z-50 fill-[#032324] max-sm:h-10 h-20 w-full
 }
+.image-shadow {
+  box-shadow: 5px 5px 20px 4px #309092,5px 5px 35px 10px #309092 ,5px 5px 10px 10px #309092 inset;
+}
