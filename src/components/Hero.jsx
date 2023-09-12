@@ -20,9 +20,9 @@ const Hero = () => {
         return () => clearTimeout(timer);
     }, [counter, counterN]);
     return (
-        <section id="home" className='h-screen relative'>
+        <section id="home" className='h-[100vh] relative'>
             <div className="w-full h-full absolute z-10 top-0 left-0">
-                <img className="h-screen w-full object-cover object-center" src={heroBg} alt="heroBg" />
+                <img className="h-[100vh] w-full object-cover object-center" src={heroBg} alt="heroBg" />
                 <div className="bg-[#00000080] absolute top-0 left-0 w-full h-full" />
             </div>
             <div className="text-white absolute z-20 top-1/2 -translate-y-1/2 left-10 lg:left-1/2 flex gap-6">
@@ -34,6 +34,17 @@ const Hero = () => {
                     <p className="mt-4 text-lg font-bold sm:text-xl md:text-2xl lg:text-3xl">We develop 3D visuals, user <br />interfaces and web applications <span className="w-2 h-2 inline-block bg-[#309092]" /></p>
                 </div>
             </div>
+            <svg
+                className="curve"
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="100%"
+                height="100"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="none"
+            >
+                <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
+            </svg>
         </section>
     )
 }

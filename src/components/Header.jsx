@@ -16,7 +16,7 @@ const Header = ({ activeSection }) => {
                 <div className="text-xl font-black">
                     logo
                 </div>
-                <ul className="flex gap-5 text-lg md:text-xl xl:text-3xl font-semibold">
+                <ul className="flex gap-5 text-lg md:text-xl text-gray-200 font-semibold">
                     {sections.map((section) => (
                         <li key={section.id}>
                             <a
