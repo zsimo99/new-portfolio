@@ -4,7 +4,7 @@ const AboutUs = () => {
     return (
         <section
             id="aboutUs"
-            className=" py-32  bg-[#BFFCFD25] "
+            className=" py-32  bg-[#032324] "
         >
             <div className="container mx-auto px-4 flex gap-10 items-center">
                 <div className="max-lg:hidden basis-1/2">
@@ -20,7 +20,7 @@ const AboutUs = () => {
                     <h2 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold text-[#309092] mb-4">
                         About Us:
                     </h2>
-                    <p className="text-base text-start md:text-lg xl:text-xl md:text-justify font-medium text-gray-700">
+                    <p className="text-base text-start md:text-lg xl:text-xl md:text-justify font-medium text-white p-10">
                         As an adept developer, I specialize in crafting captivating3D visuals,
                         captivating user interfaces, and dynamic web applications. My
                         expertise lies in harnessing the power of JavaScript and its popular

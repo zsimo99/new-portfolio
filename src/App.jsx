@@ -3,6 +3,7 @@ import AboutUs from "./components/AboutUs"
 import Header from "./components/Header"
 import Hero from "./components/Hero"
 import Tech from "./components/Tech"
+import Work from "./components/Work"
 
 
 function App() {
@@ -37,7 +38,7 @@ function App() {
       <Hero />
       <AboutUs />
       <Tech />
-      <div className="h-[2000px]"></div>
+      <Work />
     </>
   )
 }

@@ -42,7 +42,7 @@
 }
 
 .image-tech{
-  @apply inline-block h-[55px] md:h-[60px] lg:h-[70px] xl:h-[100px] mx-5 md:mx-10 object-contain grayscale hover:grayscale-0 transition-[filter] duration-200
+  @apply inline-block h-[30px] md:h-[40px] lg:h-[50px] xl:h-[60px] mx-5 md:mx-10 object-contain grayscale hover:grayscale-0 transition-[filter] duration-200
 }
 .img-tech-cont::before{
   content: "";
@@ -52,4 +52,17 @@
   width: 40px;
   height: 100%;
   background-color: red;
+}
+
+.services{
+  @apply text-center max-sm:text-base text-xl font-semibold text-[#39bec0] cursor-pointer relative py-px
+}
+.services::before{
+  @apply w-0 h-1 bg-[#39bec0] bottom-0 left-0 content-[""] absolute transition-[width] duration-300
+}
+.services:hover::before{
+  @apply w-full
+}
+.projects > div:nth-child(even){
+  @apply flex-row-reverse
 }
