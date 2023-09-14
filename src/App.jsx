@@ -40,6 +40,11 @@ function App() {
       })
     }
     window.addEventListener("scroll", handleScroll)
+
+
+    setTimeout(() => {
+      loader.current.style.transform = "translateY(-100%)"
+    }, 2000)
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("load", handleLoad)
