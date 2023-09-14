@@ -13,7 +13,6 @@ function App() {
   const [show, setShow] = useState(false)
   useEffect(() => {
     const handleLoad = () => {
-      // The entire page, including all images and assets, has finished loading
       setPageLoaded(true);
     };
     window.addEventListener("load", handleLoad)
@@ -46,7 +45,7 @@ function App() {
   }, [])
   return (
     <>
-      <div className={`fixed duration-500 transition-transform top-0 left-0 w-screen h-screen bg-[#032324] z-[2000] text-6xl flex flex-col items-center justify-center ${pageLoaded && "-translate-y-full"}`}>
+      <div className={`fixed duration-500 transition-transform top-0 left-0 w-screen h-screen bg-[#032324] z-[2000] text-6xl flex flex-col items-center justify-center ${pageLoaded && "-translate-y-[100vh]"}`}>
         <div className="w-1/2 h-2/3">
           <img className="h-full w-full object-contain" src={logo} alt="logo" />
         </div>
