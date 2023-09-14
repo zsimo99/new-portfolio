@@ -13,11 +13,7 @@ function App() {
   const [show, setShow] = useState(false)
 
   const loader = useRef(null)
-  useEffect(() => {
-    if (pageLoaded) {
-      loader.current.style.transform = "translateY(-100%)"
-    }
-  }, [pageLoaded])
+
   useEffect(() => {
     const handleLoad = () => {
       setPageLoaded(true);
@@ -44,6 +40,9 @@ function App() {
       })
     }
     window.addEventListener("scroll", handleScroll)
+    setTimeout(() => {
+      loader.current.style.transform = "translateY(-100%)"
+    }, 2000)
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -53,7 +52,7 @@ function App() {
   }, [])
   return (
     <div>
-      <div ref={loader} className={`fixed duration-500 transition-transform left-0 w-screen h-screen bg-[#032324] z-[2000] text-6xl flex flex-col items-center justify-center `}>
+      <div ref={loader} className={`fixed duration-500 transition-transform left-0 w-screen h-screen bg-[#032324] z-[2000] text-6xl flex flex-col items-center justify-center ${pageLoaded && "-translate-y-full"}`}>
         <div className="w-1/2 h-1/3">
           <img className="h-full w-full object-contain" src={logo} alt="logo" />
         </div>
