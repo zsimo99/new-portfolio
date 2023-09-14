@@ -40,11 +40,11 @@ function App() {
       })
     }
     window.addEventListener("scroll", handleScroll)
-    return () => {
+    setTimeout(() => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("load", handleLoad)
-
-    };
+      // loader.current.parentNode.removeChild(loader.current)
+    }, 2000)
   }, [])
   return (
     <div>
