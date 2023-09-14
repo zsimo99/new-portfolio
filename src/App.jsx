@@ -53,7 +53,7 @@ function App() {
   return (
     <div>
       <div ref={loader} className={`fixed duration-500 transition-transform left-0 w-screen h-screen bg-[#032324] z-[2000] text-6xl flex flex-col items-center justify-center ${pageLoaded && "-translate-y-full"}`}>
-        <div className="w-1/2 h-1/3">
+        <div className="w-full h-2/5">
           <img className="h-full w-full object-contain" src={logo} alt="logo" />
         </div>
         <div className="dot-spinner">
