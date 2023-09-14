@@ -4,14 +4,20 @@ import { useEffect, useRef, useState } from "react";
 // eslint-disable-next-line react/prop-types
 const Project = ({ nm, project: { title, link, desc, live, image } }) => {
     const [showFullImage, setSHowFullImage] = useState(false)
+    const [loading, setLoading] = useState(false);
+
     const mounted = useRef(false)
     const handleClick = () => {
+        setLoading(true);
         mounted.current = true
         setSHowFullImage(true)
         setTimeout(() => {
             mounted.current = false
         }, 100);
     }
+    const handleImageLoad = () => {
+        setLoading(false);
+    };
     useEffect(() => {
         document.addEventListener("click", () => {
             if (showFullImage && !mounted.current) {
@@ -21,8 +27,9 @@ const Project = ({ nm, project: { title, link, desc, live, image } }) => {
     }, [showFullImage])
     return (
         <div className="flex md:items-center gap-8 max-md:flex-col-reverse relative pb-8">
-            {showFullImage && <div className="fixed z-[1000] left-0 top-1/2 -translate-y-1/2 h-screen w-screen flex items-center justify-center">
-                <img className="w-screen h-[80%] object-contain" src={image} alt="" />
+            {showFullImage && <div className="fixed z-[1000] left-0 top-1/2 -translate-y-1/2 h-screen w-screen flex items-center justify-center bg-[#00000050]">
+                {loading && <div className="loader">Loading...</div>}
+                <img className="w-screen h-[80%] object-contain" src={image} onLoad={handleImageLoad} alt="" />
             </div>}
             <div className="md:basis-1/2 basis-full">
                 <h2 className="max-md:hidden text-3xl lg:text-4xl xl:text-5xl font-bold text-[#32a6a8]">
@@ -51,7 +58,7 @@ const Project = ({ nm, project: { title, link, desc, live, image } }) => {
                     Project {nm + 1}
                 </h2>
                 <div onClick={handleClick} className="cursor-pointer max-w-xl mx-auto border-8 border-[#309092] image-shadow ">
-                    <img className="translate-x-3 -translate-y-5  shadow-2xl shadow-black hover:scale-105" src={image ? image : "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"} alt="" />
+                    <img className="translate-x-3 -translate-y-5  shadow-2xl shadow-black hover:scale-105" src={image} alt="" />
                 </div>
             </div>
         </div>
