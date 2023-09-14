@@ -49,7 +49,7 @@ function App() {
         <div className="w-1/2 h-2/3">
           <img className="h-full w-full object-contain" src={logo} alt="logo" />
         </div>
-        <div className="dot-spinner">
+        {/* <div className="dot-spinner">
           <div className="dot-spinner__dot"></div>
           <div className="dot-spinner__dot"></div>
           <div className="dot-spinner__dot"></div>
@@ -58,7 +58,7 @@ function App() {
           <div className="dot-spinner__dot"></div>
           <div className="dot-spinner__dot"></div>
           <div className="dot-spinner__dot"></div>
-        </div>
+        </div> */}
       </div>
       <Header activeSection={section} show={show} setShow={setShow} />
       <Hero />
