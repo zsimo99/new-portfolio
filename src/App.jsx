@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import AboutUs from "./components/AboutUs"
 import Header from "./components/Header"
 import Hero from "./components/Hero"
@@ -11,9 +11,12 @@ function App() {
   const [pageLoaded, setPageLoaded] = useState(false);
   const [section, setSection] = useState("home")
   const [show, setShow] = useState(false)
+
+  const loader = useRef(null)
   useEffect(() => {
     const handleLoad = () => {
       setPageLoaded(true);
+      if (loader.current) loader.style.transform = "translateY(-100%)"
     };
     window.addEventListener("load", handleLoad)
 
@@ -45,10 +48,10 @@ function App() {
   }, [])
   return (
     <div>
-      <div className={`fixed duration-500 transition-transform left-0 w-screen h-screen bg-[#032324] z-[2000] text-6xl flex flex-col items-center justify-center ${pageLoaded ? "-translate-y-full" : "translate-y-0"}`}>
-        {/* <div className="w-1/2 h-2/3">
+      <div ref={loader} className={`fixed duration-500 transition-transform left-0 w-screen h-screen bg-[#032324] z-[2000] text-6xl flex flex-col items-center justify-center ${pageLoaded ? "-translate-y-full" : "translate-y-0"}`}>
+        <div className="w-1/2 h-2/3">
           <img className="h-full w-full object-contain" src={logo} alt="logo" />
-        </div> */}
+        </div>
         <div className="dot-spinner">
           <div className="dot-spinner__dot"></div>
           <div className="dot-spinner__dot"></div>
