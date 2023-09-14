@@ -8,9 +8,21 @@ import Work from "./components/Work"
 
 function App() {
   const [section, setSection] = useState("home")
+  const [show, setShow] = useState(false)
   useEffect(() => {
     const divs = document.querySelectorAll("section")
+    let prevPos = 0
     const handleScroll = () => {
+      const newPos = scrollY
+      if (newPos > prevPos) {
+        setShow(false)
+        document.querySelector("header").style.top = "-100px"
+        prevPos = newPos
+      } else {
+        setShow(false)
+        document.querySelector("header").style.top = "0"
+        prevPos = newPos
+      }
       divs.forEach(div => {
         if (window.scrollY >= div.offsetTop && window.scrollY < (div.offsetTop + div.offsetHeight)) {
           setSection(div.id)
@@ -24,7 +36,7 @@ function App() {
   }, [])
   return (
     <>
-      <Header activeSection={section} />
+      <Header activeSection={section} show={show} setShow={setShow} />
       <Hero />
       <AboutUs />
       <Tech />

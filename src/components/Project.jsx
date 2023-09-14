@@ -1,9 +1,8 @@
-import image from "../assets/projects/DynamicBlend.png";
 import arrow from "../assets/arrow-right.svg";
 import github from "../assets/github.png";
 import { useEffect, useRef, useState } from "react";
 // eslint-disable-next-line react/prop-types
-const Project = ({ nm, project: { title, link, desc, live } }) => {
+const Project = ({ nm, project: { title, link, desc, live, image } }) => {
     const [showFullImage, setSHowFullImage] = useState(false)
     const mounted = useRef(false)
     const handleClick = () => {
@@ -52,7 +51,7 @@ const Project = ({ nm, project: { title, link, desc, live } }) => {
                     Project {nm + 1}
                 </h2>
                 <div onClick={handleClick} className="cursor-pointer max-w-xl mx-auto border-8 border-[#309092] image-shadow ">
-                    <img className="translate-x-3 -translate-y-5  shadow-2xl shadow-black" src={image} alt="" />
+                    <img className="translate-x-3 -translate-y-5  shadow-2xl shadow-black hover:scale-105" src={image ? image : "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"} alt="" />
                 </div>
             </div>
         </div>

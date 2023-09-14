@@ -5,6 +5,27 @@
 * {
   scroll-behavior: smooth;
 }
+/* Hide the default scrollbar */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #08575a; /* Color of the track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #05383a; /* Color of the handle */
+  border-radius: 6px; /* Rounded corners */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color on hover */
+}
+
 
 .animateHero{
   animation: infinite 500ms ease-in show ;

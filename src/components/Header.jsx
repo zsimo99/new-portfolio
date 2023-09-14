@@ -1,4 +1,3 @@
-import { useState } from "react";
 
 const sections = [
     { id: "home", label: "Home" },
@@ -10,15 +9,15 @@ const sections = [
 ];
 
 // eslint-disable-next-line react/prop-types
-const Header = ({ activeSection }) => {
-    const [show, setShow] = useState(false)
+const Header = ({ activeSection, show, setShow }) => {
+
     return (
-        <header className="top-0 left-0 fixed w-full z-[999] text-white bg-[#44444440] shadow-xl p-3 h-[70px] flex items-center">
+        <header className="top-0 duration-500 transition-[top] left-0 fixed w-full z-[999] text-white bg-[#44444440] shadow-xl p-3 h-[70px] flex items-center">
             <div className="container mx-auto px-4 flex justify-between items-center">
                 <div className="text-4xl font-black">
                     logo
                 </div>
-                <ul className={`flex gap-5 text-lg md:text-xl text-gray-200 font-semibold max-lg:fixed max-lg:flex-col max-lg:bg-[#44444430]  max-lg:w-[150px] top-0 max-lg:h-screen transition-[right] duration-300 max-lg:text-center max-lg:pt-14 ${!show ? "right-[-150px]" : " right-0"}`}>
+                <ul className={`flex gap-5 text-lg md:text-xl text-gray-200 font-semibold max-lg:fixed max-lg:flex-col max-lg:bg-[#44444430]  max-lg:w-[180px] top-0 max-lg:h-screen transition-[right] duration-300 max-lg:text-center max-lg:pt-14 ${!show ? "right-[-180px]" : " right-0"}`}>
                     {sections.map((section) => (
                         <li key={section.id}>
                             <a
