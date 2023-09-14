@@ -18,7 +18,7 @@ function App() {
         setShow(false)
         document.querySelector("header").style.top = "-100px"
         prevPos = newPos
-      } else {
+      } else if (window.scrollY === 0 || newPos < prevPos) {
         setShow(false)
         document.querySelector("header").style.top = "0"
         prevPos = newPos
