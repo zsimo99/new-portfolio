@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     const handleLoad = () => {
       setPageLoaded(true);
-      if (loader.current) loader.style.transform = "translateY(-100%)"
+      if (loader.current) loader.current.style.transform = "translateY(-100%)"
     };
     window.addEventListener("load", handleLoad)
 
@@ -40,16 +40,16 @@ function App() {
       })
     }
     window.addEventListener("scroll", handleScroll)
-    setTimeout(() => {
+    return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("load", handleLoad)
-      loader.current.parentNode.removeChild(loader.current)
-    }, 2000)
+
+    };
   }, [])
   return (
     <div>
       <div ref={loader} className={`fixed duration-500 transition-transform left-0 w-screen h-screen bg-[#032324] z-[2000] text-6xl flex flex-col items-center justify-center ${pageLoaded ? "-translate-y-full" : "translate-y-0"}`}>
-        <div className="w-1/2 h-2/3">
+        <div className="w-1/2 h-1/3">
           <img className="h-full w-full object-contain" src={logo} alt="logo" />
         </div>
         <div className="dot-spinner">
