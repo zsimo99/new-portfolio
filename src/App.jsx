@@ -58,7 +58,7 @@ function App() {
     };
   }, [])
   return (
-    <div>
+    <div className="overflow-hidden">
       <Loader loader={loader} logo={logo} />
       <Header activeSection={section} show={show} setShow={setShow} />
       <Hero showHero={showHero} />
