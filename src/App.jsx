@@ -5,24 +5,30 @@ import Hero from "./components/Hero"
 import Tech from "./components/Tech"
 import Work from "./components/Work"
 import logo from "./assets/logo.svg"
+import Loader from "./components/Loader"
+
 
 
 function App() {
-  const [pageLoaded, setPageLoaded] = useState(false);
   const [section, setSection] = useState("home")
   const [show, setShow] = useState(false)
+  const [showHero, setShowHero] = useState(false)
 
   const loader = useRef(null)
 
+
+
   useEffect(() => {
-    const handleLoad = () => {
-      setPageLoaded(true);
-    };
-    window.addEventListener("load", handleLoad)
 
     const divs = document.querySelectorAll("section")
     let prevPos = 0
     const handleScroll = () => {
+      document.querySelectorAll(".hide").forEach((elm) => {
+        if ((elm.offsetTop - ((innerHeight * 2) / 3)) < scrollY) {
+          console.log(elm)
+          elm.classList.remove("hide")
+        }
+      })
       const newPos = scrollY
       if (newPos > prevPos) {
         setShow(false)
@@ -39,36 +45,23 @@ function App() {
         }
       })
     }
+
+
     window.addEventListener("scroll", handleScroll)
     setTimeout(() => {
       loader.current.style.transform = "translateY(-100%)"
+      setShowHero(true)
     }, 2000)
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("load", handleLoad)
-
     };
   }, [])
   return (
     <div>
-      <div ref={loader} className={`fixed duration-500 transition-transform left-0 w-screen h-screen bg-[#032324] z-[2000] text-6xl flex flex-col items-center justify-center ${pageLoaded && "-translate-y-full"}`}>
-        <div className="w-full h-2/5">
-          <img className="h-full w-full object-contain" src={logo} alt="logo" />
-        </div>
-        <div className="dot-spinner">
-          <div className="dot-spinner__dot"></div>
-          <div className="dot-spinner__dot"></div>
-          <div className="dot-spinner__dot"></div>
-          <div className="dot-spinner__dot"></div>
-          <div className="dot-spinner__dot"></div>
-          <div className="dot-spinner__dot"></div>
-          <div className="dot-spinner__dot"></div>
-          <div className="dot-spinner__dot"></div>
-        </div>
-      </div>
+      <Loader loader={loader} logo={logo} />
       <Header activeSection={section} show={show} setShow={setShow} />
-      <Hero />
+      <Hero showHero={showHero} />
       <AboutUs />
       <Tech />
       <Work />
@@ -76,5 +69,8 @@ function App() {
     </div>
   )
 }
+
+
+
 
 export default App

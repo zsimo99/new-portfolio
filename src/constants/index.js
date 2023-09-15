@@ -23,7 +23,7 @@ export const projects = [
     {
         title: "Github finder",
         link: "https://github.com/zsimo99/github-finder-app",
-        desc: "GitHub API Unleashed: Explore dynamic user insights with seamless data display.",
+        desc: "This app allows users to search for specific GitHub users and retrieve comprehensive results. It offers an elegant and user-friendly interface that simplifies the process of visualizing user and repository data, making it a valuable tool for anyone looking to gain insights into GitHub activity.",
         live: "https://github-finder-app-bay-delta.vercel.app",
         done: true,
         category: "wa",

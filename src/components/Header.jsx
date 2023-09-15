@@ -1,4 +1,4 @@
-
+import logo from "../assets/logo2.svg"
 const sections = [
     { id: "home", label: "Home" },
     { id: "aboutUs", label: "About Us" },
@@ -14,8 +14,9 @@ const Header = ({ activeSection, show, setShow }) => {
     return (
         <header className="top-0 duration-500 transition-[top] left-0 fixed w-full z-[999] text-white bg-[#44444440] shadow-xl p-3 h-[70px] flex items-center">
             <div className="container mx-auto px-4 flex justify-between items-center">
-                <div className="text-4xl font-black">
-                    logo
+                <div className=" flex gap-1 items-end">
+                    <img className="w-11 rounded-full border-[#309092] border-2 p-1" src={logo} alt="" />
+                    <p className="text-xl font-black"><span className="text-[#309092]">ZST</span> Agency</p>
                 </div>
                 <ul className={`flex gap-5 text-lg md:text-xl text-gray-200 font-semibold max-lg:fixed max-lg:flex-col max-lg:bg-[#44444430]  max-lg:w-[180px] top-0 max-lg:h-screen transition-[right] duration-300 max-lg:text-center max-lg:pt-14 ${!show ? "right-[-180px]" : " right-0"}`}>
                     {sections.map((section) => (

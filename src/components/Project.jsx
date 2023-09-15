@@ -26,7 +26,7 @@ const Project = ({ nm, project: { title, link, desc, live, image } }) => {
         })
     }, [showFullImage])
     return (
-        <div className="flex md:items-center gap-8 max-md:flex-col-reverse relative pb-8">
+        <div className="flex md:items-center gap-8 max-md:flex-col-reverse relative pb-8 hide duration-700 transition-[opacity,transform]">
             {showFullImage && <div className="fixed z-[1000] left-0 top-1/2 -translate-y-1/2 h-screen w-screen flex items-center justify-center bg-[#00000050]">
                 {loading && <div className="loader">Loading...</div>}
                 <img className="w-screen h-[80%] object-contain" src={image} onLoad={handleImageLoad} alt="" />
@@ -39,7 +39,7 @@ const Project = ({ nm, project: { title, link, desc, live, image } }) => {
                     <h3 className="text-2xl lg:text-3xl xl:text-4xl mt-4 mb-2">
                         {title}
                     </h3>
-                    <p className="text-gray-300">
+                    <p className="text-gray-300 max-w-md text-justify">
                         {desc}
                     </p>
                     <div className="flex items-center mt-3 gap-10">
@@ -58,7 +58,7 @@ const Project = ({ nm, project: { title, link, desc, live, image } }) => {
                     Project {nm + 1}
                 </h2>
                 <div onClick={handleClick} className="cursor-pointer max-w-xl mx-auto border-8 border-[#309092] image-shadow ">
-                    <img className="translate-x-3 -translate-y-5  shadow-2xl shadow-black hover:scale-105" src={image} alt="" />
+                    <img className="translate-x-3 -translate-y-5 rounded-md  shadow-2xl shadow-black hover:scale-105" src={image} alt="" />
                 </div>
             </div>
         </div>
