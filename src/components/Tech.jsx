@@ -40,7 +40,7 @@ const Tech = () => {
         }
     }, [])
     return (
-        <div className=" py-2 md:py-4 xl:py-6 overflow-hidden px-4 relative bg-[#276f70]">
+        <div className="py-2 md:py-4 xl:py-6 overflow-hidden relative bg-[#276f70] tech-shadow">
             <div className="absolute top-0 left-0 w-1/4 h-full bg-gradient-to-r from-[#032324] to-transparent z-10" />
             <div className="absolute top-0 right-0 w-1/4 h-full bg-gradient-to-l from-[#032324] to-transparent z-10" />
             <div className='slider whitespace-nowrap '>
