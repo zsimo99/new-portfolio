@@ -3,6 +3,7 @@ import heroBg from "../assets/pexels-daniel-eliashevsky-6942359.jpg"
 
 const text = ["I'm Mohamed", "I'm Zakaria", "We Are ZST Agency"]
 
+// eslint-disable-next-line react/prop-types
 const Hero = ({ showHero }) => {
     const [counter, setCounter] = useState(0)
     // eslint-disable-next-line no-unused-vars
