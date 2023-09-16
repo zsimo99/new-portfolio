@@ -27,9 +27,9 @@ const Project = ({ nm, project: { title, link, desc, live, image } }) => {
     }, [showFullImage])
     return (
         <div className="flex md:items-center gap-8 max-md:flex-col-reverse relative pb-8 hide duration-700 transition-[opacity,transform]">
-            {showFullImage && <div className="fixed z-[1000] left-0 top-1/2 -translate-y-1/2 h-screen w-screen flex items-center justify-center bg-[#00000050]">
+            {showFullImage && <div className="fixed z-[1000] left-0 top-1/2 -translate-y-1/2 h-screen w-screen flex items-center justify-center bg-[#00000090]">
                 {loading && <div className="loader">Loading...</div>}
-                <img className="w-screen h-[80%] object-contain" src={image} onLoad={handleImageLoad} alt="" />
+                <img className="w-screen h-[80%] object-contain " src={image} onLoad={handleImageLoad} alt="" />
             </div>}
             <div className="md:basis-1/2 basis-full">
                 <h2 className="max-md:hidden text-3xl lg:text-4xl xl:text-5xl font-bold text-[#32a6a8]">

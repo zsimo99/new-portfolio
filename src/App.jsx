@@ -6,6 +6,7 @@ import Tech from "./components/Tech"
 import Work from "./components/Work"
 import logo from "./assets/logo.svg"
 import Loader from "./components/Loader"
+import Services from "./components/Services"
 
 
 
@@ -24,7 +25,9 @@ function App() {
     let prevPos = 0
     const handleScroll = () => {
       document.querySelectorAll(".hide").forEach((elm) => {
-        if ((elm.offsetTop - ((innerHeight * 2) / 3)) < scrollY) {
+        const rect = elm.getBoundingClientRect();
+        const offsetTop = rect.top + scrollY
+        if ((offsetTop - ((innerHeight * 2) / 3)) < scrollY) {
           console.log(elm)
           elm.classList.remove("hide")
         }
@@ -65,6 +68,7 @@ function App() {
       <AboutUs />
       <Tech />
       <Work />
+      <Services />
 
     </div>
   )

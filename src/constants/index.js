@@ -103,3 +103,26 @@ export const projects = [
     },
 
 ]
+
+import ui from "../assets/icons/ui.svg"
+import wp from "../assets/icons/wp.svg"
+import anim from "../assets/icons/anim.svg"
+
+
+export const services = [
+    {
+        icon: ui,
+        title: "UI/UX Design",
+        desc: ""
+    },
+    {
+        icon: wp,
+        title: "Web Application",
+        desc: ""
+    },
+    {
+        icon: anim,
+        title: "2D Animation",
+        desc: ""
+    },
+]
