@@ -126,3 +126,29 @@ export const services = [
         desc: ""
     },
 ]
+import aro from "../assets/icons/@.svg"
+import fi from "../assets/icons/fi.svg"
+import up from "../assets/icons/up.svg"
+import inn from "../assets/icons/in.svg"
+export const social = [
+    {
+        icon: aro,
+        text: "Email",
+        link: "#"
+    },
+    {
+        icon: fi,
+        text: "Fiver",
+        link: "#"
+    },
+    {
+        icon: up,
+        text: "Upwork",
+        link: "#"
+    },
+    {
+        icon: inn,
+        text: "inn",
+        link: "#"
+    },
+]

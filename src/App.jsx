@@ -7,6 +7,7 @@ import Work from "./components/Work"
 import logo from "./assets/logo.svg"
 import Loader from "./components/Loader"
 import Services from "./components/Services"
+import Contact from "./components/Contact"
 
 
 
@@ -69,6 +70,7 @@ function App() {
       <Tech />
       <Work />
       <Services />
+      <Contact />
 
     </div>
   )
