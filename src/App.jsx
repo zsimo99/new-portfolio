@@ -34,7 +34,7 @@ function App() {
         }
       })
       const newPos = scrollY
-      if (newPos > prevPos) {
+      if (newPos > prevPos && scrollY > 0) {
         setShow(false)
         document.querySelector("header").style.top = "-100px"
         prevPos = newPos

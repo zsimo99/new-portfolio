@@ -51,7 +51,7 @@ export const projects = [
     {
         title: "House Marketplace",
         link: "https://github.com/zsimo99/House-Marketplace",
-        desc: "HouseMarketplace: An impressive dynamic web project demonstrating HTML, CSS, JS, and Firebase integration, presenting a modern marketplace.",
+        desc: "This dynamic application utilizes Firebase for its backend, allowing users to seamlessly list their houses for sale or rent. With an intuitive and user-friendly interface, individuals can easily upload property details, images, and pricing information. Prospective buyers and renters can then browse through available listings, making it a convenient platform for both property owners and seekers in the housing market.",
         live: "https://housemarketplacezsimo.netlify.app/",
         done: true,
         category: "wa",
@@ -60,7 +60,7 @@ export const projects = [
     {
         title: "Promptobia",
         link: "https://github.com/zsimo99/project-proptopia",
-        desc: "Open-source AI prompting tool for modern world to discover, create and share creative prompts",
+        desc: " I'm showcasing an open-source AI prompting platform built with Next.js. This platform allows users to share and generate thought-provoking questions for AI. It's a user-friendly space for creating and exploring creative prompts to fuel AI innovation in the modern world",
         live: "https://project-proptopia-git-main-zsimo99.vercel.app",
         done: true,
         category: "wa",
@@ -86,7 +86,7 @@ export const projects = [
     {
         title: "dall-e Clone",
         link: "https://github.com/zsimo99/dall-e",
-        desc: "This project is a DALL·E clone, which allows you to generate images using the power of IA.",
+        desc: "I'm featuring my DALL·E clone project, a powerful AI-driven image generation tool. This project harnesses the capabilities of AI to create unique images, opening up a world of creative possibilities for users.",
         live: "",
         done: true,
         category: "wa",
@@ -95,7 +95,7 @@ export const projects = [
     {
         title: "Todozs",
         link: "https://github.com/zsimo99/todoList",
-        desc: "Stay organized, productive, and in control of your tasks.",
+        desc: "I'm presenting 'Todozs,' a user-friendly todo list app. Todozs simplifies task management, helping users stay organized and productive with ease.",
         live: "https://todolist-zsimo.onrender.com/",
         done: true,
         category: "wa",

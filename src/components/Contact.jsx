@@ -3,7 +3,7 @@ import logo from "../assets/logo.svg"
 
 const Contact = () => {
     return (
-        <div className="bg-[#032324] pt-24 sm:pt-40 text-gray-300  ">
+        <section id="contact" className="bg-[#032324] pt-24 sm:pt-40 text-gray-300  ">
             <div className="rounded-t-[100px] min-h-[500px] bg-[#0A4F51] bg-gradient-to-r from-[#2c6f74] to-[#026468] relative p-10">
                 <div className="w-48 h-48 sm:w-80 sm:h-80 top-0 left-0 rounded-full -translate-y-1/2 absolute -translate-x-1/2 opacity-30 bg-[#2aa2a7]" />
                 <div className="w-48 h-48 sm:w-80 sm:h-80 top-0 right-0 rounded-full -translate-y-1/2 absolute translate-x-1/2 opacity-30 bg-[#2aa2a7]" />
@@ -38,7 +38,7 @@ const Contact = () => {
                 </div>
 
             </div>
-        </div>
+        </section>
     )
 }
 
