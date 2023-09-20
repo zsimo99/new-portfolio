@@ -11,15 +11,15 @@ import todozs from "../assets/projects/todozs.png"
 export const projects = [
 
 
-    {
-        title: "BlogZs",
-        link: "https://github.com/zsimo99/blog-zs-v2",
-        desc: "This project is a basic website template created with HTML and CSS.",
-        live: "https://blog-zs-v2.vercel.app/",
-        done: true,
-        category: "wa",
-        image: leon
-    },
+    // {
+    //     title: "BlogZs",
+    //     link: "https://github.com/zsimo99/blog-zs-v2",
+    //     desc: "This project is a basic website template created with HTML and CSS.",
+    //     live: "https://blog-zs-v2.vercel.app/",
+    //     done: true,
+    //     category: "wa",
+    //     image: leon
+    // },
     {
         title: "leon Template",
         link: "https://github.com/zsimo99/BasicWebTemplate-1",
@@ -138,7 +138,7 @@ export const services = [
 import aro from "../assets/icons/@.svg"
 import fi from "../assets/icons/fi.svg"
 import up from "../assets/icons/up.svg"
-import inn from "../assets/icons/in.svg"
+// import inn from "../assets/icons/in.svg"
 export const social = [
     {
         icon: aro,
@@ -153,11 +153,11 @@ export const social = [
     {
         icon: up,
         text: "Upwork",
-        link: "#"
+        link: "https://www.upwork.com/freelancers/~01207a869afcfb3c81"
     },
-    {
-        icon: inn,
-        text: "inn",
-        link: "#"
-    },
+    // {
+    //     icon: inn,
+    //     text: "inn",
+    //     link: "#"
+    // },
 ]

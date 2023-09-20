@@ -52,7 +52,7 @@ const Contact = () => {
                         <div className="flex max-lg:flex-col items-center">
                             <ul className="basis-1/2 flex-1 mt-8 flex  lg:flex-col gap-4 max-lg:justify-center flex-wrap">
                                 {social.map((elm, id) => <li key={id}>
-                                    <a href={elm.link} className="inline-block bg-gradient-to-r rounded-lg from-[#285c5c] to-[#0b6668] gap-4 p-2">
+                                    <a target="_blank" rel="noreferrer" href={elm.link} className="inline-block bg-gradient-to-r rounded-lg from-[#285c5c] to-[#0b6668] gap-4 p-2">
                                         <img className="w-10" src={elm.icon} alt="" />
                                     </a>
                                 </li>)}
