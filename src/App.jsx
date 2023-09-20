@@ -1,22 +1,20 @@
+
 import { useEffect, useRef, useState } from "react"
-import AboutUs from "./components/AboutUs"
-import Header from "./components/Header"
-import Hero from "./components/Hero"
-import Tech from "./components/Tech"
-import Work from "./components/Work"
-import logo from "./assets/logo.svg"
+import { Route, Routes, BrowserRouter as Router } from "react-router-dom"
 import Loader from "./components/Loader"
-import Services from "./components/Services"
-import Contact from "./components/Contact"
+import logo from "./assets/logo.png"
+import Home from "./pages/Home"
+import Works from "./pages/Works"
 
 
 
 function App() {
+  const loader = useRef(null)
+  // const [showHero, setShowHero] = useState(false)
+  const [load, setLoad] = useState(true)
   const [section, setSection] = useState("home")
   const [show, setShow] = useState(false)
-  const [showHero, setShowHero] = useState(false)
 
-  const loader = useRef(null)
 
 
 
@@ -29,7 +27,6 @@ function App() {
         const rect = elm.getBoundingClientRect();
         const offsetTop = rect.top + scrollY
         if ((offsetTop - ((innerHeight * 2) / 3)) < scrollY) {
-          console.log(elm)
           elm.classList.remove("hide")
         }
       })
@@ -52,27 +49,32 @@ function App() {
 
 
     window.addEventListener("scroll", handleScroll)
-    setTimeout(() => {
-      loader.current.style.transform = "translateY(-100%)"
-      setShowHero(true)
-    }, 2000)
+
+
+
+
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [])
-  return (
-    <div className="overflow-hidden">
-      <Loader loader={loader} logo={logo} />
-      <Header activeSection={section} show={show} setShow={setShow} />
-      <Hero showHero={showHero} />
-      <AboutUs />
-      <Tech />
-      <Work />
-      <Services />
-      <Contact />
+  useEffect(() => {
+    if (load)
+      setTimeout(() => {
+        setLoad(false)
+      }, 2000);
+  }, [load])
 
-    </div>
+  return (
+    <>
+      <Loader load={load} loader={loader} logo={logo} />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home section={section} show={show} setShow={setShow} load={load} setLoad={setLoad} />} />
+          <Route path="/work" element={<Works load={load} setLoad={setLoad} />} />
+        </Routes>
+      </Router>
+    </>
   )
 }
 

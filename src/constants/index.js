@@ -12,6 +12,15 @@ export const projects = [
 
 
     {
+        title: "BlogZs",
+        link: "https://github.com/zsimo99/blog-zs-v2",
+        desc: "This project is a basic website template created with HTML and CSS.",
+        live: "https://blog-zs-v2.vercel.app/",
+        done: true,
+        category: "wa",
+        image: leon
+    },
+    {
         title: "leon Template",
         link: "https://github.com/zsimo99/BasicWebTemplate-1",
         desc: "This project is a basic website template created with HTML and CSS.",
@@ -113,17 +122,17 @@ export const services = [
     {
         icon: ui,
         title: "UI/UX Design",
-        desc: ""
+        desc: "Creating beautiful and functional websites tailored to your needs."
     },
     {
         icon: wp,
         title: "Web Application",
-        desc: ""
+        desc: "Designing intuitive and efficient web applications for enhanced user experiences."
     },
     {
         icon: anim,
         title: "2D Animation",
-        desc: ""
+        desc: "Bringing stories to life with captivating 2D animations."
     },
 ]
 import aro from "../assets/icons/@.svg"

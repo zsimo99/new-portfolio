@@ -17,7 +17,7 @@ const AboutUs = () => {
                     </div>
                 </div>
                 <div className="lg:basis-1/2">
-                    <h2 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold text-[#40dcdf] mb-4 hide duration-700 transition-[opacity,transform] ">
+                    <h2 className="text-5xl md:text-6xl xl:text-7xl  font-extrabold text-[#40dcdf] mb-4 hide duration-700 transition-[opacity,transform] ">
                         About Us:
                     </h2>
                     <p className="text-base text-start md:text-lg xl:text-xl md:text-justify font-medium text-white p-10 hide duration-700 transition-[opacity,transform]">

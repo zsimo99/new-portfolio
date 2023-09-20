@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react"
 import heroBg from "../assets/pexels-daniel-eliashevsky-6942359.jpg"
 
-const text = ["I'm Mohamed", "I'm Zakaria", "We Are ZST Agency"]
+const text = ["I'm Mohamed", "I'm Zakaria", "We Are ZMT Agency"]
 
 // eslint-disable-next-line react/prop-types
-const Hero = ({ showHero }) => {
+const Hero = ({ load }) => {
     const [counter, setCounter] = useState(0)
     // eslint-disable-next-line no-unused-vars
     const [counterN, setCounterN] = useState(2)
@@ -26,7 +26,7 @@ const Hero = ({ showHero }) => {
                 <img className="h-[100vh] w-full object-cover object-center" src={heroBg} alt="heroBg" />
                 <div className="bg-[#00000080] absolute top-0 left-0 w-full h-full" />
             </div>
-            <div className={`text-white absolute z-20 top-1/2 -translate-y-1/2 left-10 lg:left-1/2 flex gap-6 duration-700 delay-300 transition-[opacity,transform] ${!showHero && "opacity-0 translate-y-4 translate-x-4 "}`}>
+            <div className={`text-white absolute z-20 top-1/2 -translate-y-1/2 left-10 lg:left-1/2 flex gap-6 duration-700 delay-300 transition-[opacity,transform] ${load && "opacity-0 translate-y-4 translate-x-4 "}`}>
                 <div className="relative w-2 h-28 md:h-40 bg-gradient-to-b from-[#309092] to-transparent">
                     <div className="w-8 h-8 bg-[#309092] -translate-x-1/2 rounded-full absolute top-0 left-1/2" />
                 </div>
