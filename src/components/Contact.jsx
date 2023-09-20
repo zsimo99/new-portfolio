@@ -22,7 +22,7 @@ const Contact = () => {
         const emailBody = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
 
         // Compose the mailto URL
-        const mailtoURL = `mailto:mohamedzoraa100@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+        const mailtoURL = `mailto:mohamedprof228@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
 
         // Open the user's default email client with the mailto URL
         window.location.href = mailtoURL;
@@ -103,7 +103,7 @@ const Contact = () => {
                         <div className=" w-full md:w-2/3 bg-gray-100 grid place-items-center p-10 rounded-xl text-gray-700 font-medium">
                             <div>
                                 <p >Thank you for reaching out!. I&apos;ll get back to you as soon as possible. In the meantime, feel free to explore more of my portfolio.</p>
-                                <p>If you encounter any issues, don&apos;t hesitate to reach out to me directly at <a className="underline text-blue-600" href="mailto:mohamedzoraa100@gmail.com">mohamedzoraa100@gmail.com</a>.</p>
+                                <p>If you encounter any issues, don&apos;t hesitate to reach out to me directly at <a className="underline text-blue-600" href="mailto:mohamedprof228@gmail.com">mohamedprof228@gmail.com</a>.</p>
                                 <p className="text-xl text-pink-600 font-semibold mt-4">Have a great day!</p>
                                 <button onClick={() => setEmailSent(false)} className="bg-red-500 mt-4 ms-auto px-8 py-2 block text-white font-semibold rounded-lg">Close</button>
                             </div>
