@@ -14,7 +14,7 @@ const Header = ({ activeSection, show, setShow }) => {
     return (
         <header className="top-0 duration-500 transition-[top] left-0 fixed w-full z-[999] text-white bg-[#44444440] shadow-xl p-3 h-[70px] flex items-center">
             <div className="container mx-auto px-4 flex justify-between items-center">
-                <Link to="/" className=" flex gap-1 items-end cursor-pointer">
+                <Link to="/" className=" flex gap-1 items-center cursor-pointer">
                     <img className="w-11 rounded-full border-[#309092] border-2 p-1" src={logo} alt="" />
                     <p className="text-xl font-black"><span className="text-[#309092]">ZST</span> Agency</p>
                 </Link>
