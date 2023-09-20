@@ -26,6 +26,7 @@ function Home({ load, section, show, setShow, setLoad }) {
             <Work setLoad={setLoad} />
             <Services />
             <Contact />
+
         </div>
     )
 }

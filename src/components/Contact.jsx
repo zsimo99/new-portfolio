@@ -59,7 +59,7 @@ const Contact = () => {
                             </ul>
                             <div className="basis-1/2 flex-1 flex flex-col items-center">
                                 <img className="max-w-[250px] w-full" src={logo} alt="" />
-                                <p className="text-4xl font-black"><span className="text-[#40DCDF]">ZST</span> Agency</p>
+                                <p className="text-4xl font-black"><span className="text-[#40DCDF]">ZMT</span> Agency</p>
                             </div>
                         </div>
                     </div>

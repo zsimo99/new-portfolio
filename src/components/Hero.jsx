@@ -31,7 +31,7 @@ const Hero = ({ load }) => {
                     <div className="w-8 h-8 bg-[#309092] -translate-x-1/2 rounded-full absolute top-0 left-1/2" />
                 </div>
                 <div >
-                    <p className="text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl">Hi,&nbsp;<span className="text-[#309092]">{text[counterN].slice(0, counter)}</span>  <span className="-translate-x-1 md:-translate-x-2 lg:-translate-x-3 translate-y-1 w-px inline-block h-6 sm:h-8 md:h-10 lg:h-12 bg-white animateHero"></span></p>
+                    <p className="text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl">Hi,&nbsp;<span className="text-[#309092]">We Are ZMT Agency</span>  <span className="-translate-x-1 md:-translate-x-2 lg:-translate-x-3 translate-y-1 w-px inline-block h-6 sm:h-8 md:h-10 lg:h-12 bg-white animateHero"></span></p>
                     <p className="mt-4 text-lg font-bold sm:text-xl md:text-2xl lg:text-3xl">We develop 3D visuals, user <br />interfaces and web applications <span className="w-2 h-2 inline-block bg-[#309092]" /></p>
                 </div>
             </div>

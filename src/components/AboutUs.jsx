@@ -1,6 +1,14 @@
-import image from "../assets/about_us 1.svg";
+import { useEffect } from "react";
+// import image from "../assets/about_us 1.svg";
+import video from "../assets/video/Last2.mp4"
+import { DefaultPlayer as Video } from "react-html5video";
+import 'react-html5video/dist/styles.css'
+import logo from "../assets/z.png"
 
 const AboutUs = () => {
+    useEffect(() => {
+
+    }, [])
     return (
         <section
             id="aboutUs"
@@ -8,12 +16,10 @@ const AboutUs = () => {
         >
             <div className="container mx-auto px-4 flex gap-10 items-center">
                 <div className="max-lg:hidden basis-1/2">
-                    <div className="border-8 border-[#309092] max-w-sm mx-auto">
-                        <img
-                            src={image}
-                            alt="about us"
-                            className="-translate-x-10 -translate-y-20 animate-move"
-                        />
+                    <div className="border-8 border-[#309092]">
+                        <Video autoPlay loop>
+                            <source src={video} type="video/mp4" />
+                        </Video>
                     </div>
                 </div>
                 <div className="lg:basis-1/2">

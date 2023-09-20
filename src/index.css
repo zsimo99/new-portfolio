@@ -48,9 +48,6 @@
   }
 }
 
-.animate-move{
-  animation: move 2s ease-in-out infinite alternate;
-}
 
 
 @keyframes move {

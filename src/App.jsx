@@ -21,6 +21,7 @@ function App() {
   useEffect(() => {
 
     const divs = document.querySelectorAll("section")
+
     let prevPos = 0
     const handleScroll = () => {
       document.querySelectorAll(".hide").forEach((elm) => {
@@ -30,6 +31,7 @@ function App() {
           elm.classList.remove("hide")
         }
       })
+
       const newPos = scrollY
       if (newPos > prevPos && scrollY > 0) {
         setShow(false)
