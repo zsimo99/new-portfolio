@@ -143,12 +143,12 @@ export const social = [
     {
         icon: aro,
         text: "Email",
-        link: "#"
+        link: "mailto:mohamedprof228@gmail.com"
     },
     {
         icon: fi,
         text: "Fiver",
-        link: "#"
+        link: "https://www.fiverr.com/zakariami?source=gig_page"
     },
     {
         icon: up,
