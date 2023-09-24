@@ -23,8 +23,8 @@ function Home({ load, section, show, setShow, setLoad }) {
             <Hero load={load} />
             <AboutUs />
             <Tech />
-            <Work setLoad={setLoad} />
             <Services />
+            <Work setLoad={setLoad} />
             <Contact />
 
         </div>

@@ -3,7 +3,7 @@ import Service from "./Service"
 
 const Services = () => {
     return (
-        <section id="services" className="py-40 bg-[#0A4F51] text-white">
+        <section id="services" className="py-40 bg-[#0A4F51] text-white relative">
             <div className="container mx-auto p-4">
                 <div className="relative hide duration-700 transition-[opacity,transform] ">
                     <h1 className="text-5xl md:text-6xl xl:text-7xl  font-extrabold text-[#40dcdf] text-center">Services</h1>
@@ -13,6 +13,14 @@ const Services = () => {
                     {services.map((service, id) => <Service key={id} id={id} {...service} />)}
                 </div>
             </div>
+            <svg
+                className="slant "
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="none"
+            >
+                <polygon points="0,100 100,0 100,100" />
+            </svg>
         </section>
     )
 }

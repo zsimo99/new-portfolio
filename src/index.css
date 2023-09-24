@@ -100,9 +100,9 @@
   box-shadow: 0 0 60px 5px #276f70;
 }
 .slant{
-  @apply absolute -bottom-[1px] left-0 z-50 fill-[#0A4F51] max-sm:h-10 h-20 w-full
+  @apply absolute top-[calc(100%-1px)] left-0 z-50  max-sm:h-10 h-20 w-full fill-[#0A4F51] rotate-180
 }
-
+/*  */
 
 
 

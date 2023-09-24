@@ -14,14 +14,7 @@ const Work = ({ setLoad }) => {
                 <li className={`services ${service === "anim" && "before:w-full"}`} onClick={() => setService("anim")}>2D Animation</li>
             </ul>
             <Projects setLoad={setLoad} service={service} showAll={false} />
-            <svg
-                className="slant"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 100 100"
-                preserveAspectRatio="none"
-            >
-                <polygon points="0,100 100,0 100,100" />
-            </svg>
+
         </section>
     )
 }
